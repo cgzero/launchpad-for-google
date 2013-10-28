@@ -1,0 +1,108 @@
+/****************************
+ * reset css
+ ****************************/
+html, body, ul, li, h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover{ text-decoration: none;}
+.clr:after {
+    content:" ";
+    display:block;
+    height:0;
+    clear:both;
+    visibility: hidden;
+}
+
+#wrapper .hidden, .hidden {
+    visibility: hidden;
+}
+
+#wrapper .visible, .visible {
+    visibility: visible;
+}
+
+.app-hr {
+    width: 270px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 30px;
+}
+
+/****************************
+ * global style
+ ****************************/
+#wrapper {
+    width: 305px;
+    height: 385px;
+    overflow: hidden;
+    font-family: arial, sans-serif;
+}
+#container {
+    width: 270px;
+    height: 710px;
+    overflow: hidden;
+    padding: 30px 0 0 25px;
+}
+
+.app-btn {
+    color: #404040;
+    display: block;
+    float: left;
+    font-size: 13px;
+    outline: none;
+    height: 84px;
+    width: 64px;
+    padding: 0 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.app-icon {
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url(../images/icons.png) no-repeat;
+}
+
+.app-text {
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.more {
+    position: fixed;
+    width: 305px;
+    height: 40px;
+    background-color: #f5f5f5;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.more a {
+    display: block;
+    width: 305px;
+    height: 40px;
+    line-height: 40px;
+    color: #737373;
+    font-size: 13px;
+}
+
+.even-more {
+    padding-top: 30px;
+    display: block;
+    text-align: center;
+    width: 270px;
+    color: #999;
+    clear: both;
+    font-size: 13px;
+}
+
+.even-more:hover {
+    text-decoration: underline;
+}
