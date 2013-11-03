@@ -4,7 +4,7 @@ $(document).ready(function() {
     $("#wrapper").mCustomScrollbar({
         scrollInertia:150,
         theme:'dark',
-        autoHideScrollbar: true,
+        // autoHideScrollbar: true,
         callbacks: {
             whileScrolling : function() {
                 $(".mCSB_dragger").removeClass('hidden').addClass('visible');

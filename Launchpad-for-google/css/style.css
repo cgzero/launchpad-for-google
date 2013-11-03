@@ -38,20 +38,19 @@ a, a:hover{ text-decoration: none;}
 #wrapper {
     width: 305px;
     height: 385px;
-    overflow: hidden;
     font-family: arial, sans-serif;
 }
 #container {
-    width: 270px;
+    font-size: 0;
+    -webkit-text-size-adjust:none;
     height: 710px;
-    overflow: hidden;
+    width: 270px;
     padding: 30px 0 0 25px;
 }
 
 .app-btn {
     color: #404040;
-    display: block;
-    float: left;
+    display: inline-block;
     font-size: 13px;
     outline: none;
     height: 84px;
