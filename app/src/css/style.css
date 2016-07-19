@@ -1,12 +1,16 @@
-/****************************
- * reset css
- ****************************/
-html, body, ul, li, h1, h2, h3, h4, h5, h6, p{
+/* comm */
+html, body,
+ul, li,
+h1, h2, h3, h4, h5, h6,
+p{
     margin: 0;
     padding: 0;
 }
 
-a, a:hover{ text-decoration: none;}
+a {
+    text-decoration: none;
+}
+
 .clr:after {
     content:" ";
     display:block;
@@ -15,11 +19,13 @@ a, a:hover{ text-decoration: none;}
     visibility: hidden;
 }
 
-#wrapper .hidden, .hidden {
+#wrapper .hidden,
+.hidden {
     visibility: hidden;
 }
 
-#wrapper .visible, .visible {
+#wrapper .visible,
+.visible {
     visibility: visible;
 }
 
@@ -32,23 +38,22 @@ a, a:hover{ text-decoration: none;}
     margin-bottom: 30px;
 }
 
-html, body {
+html,
+body {
     overflow: hidden;
-    height: 385px;
+    height: 500px;
 }
 
-/****************************
- * global style
- ****************************/
+/* buzz */
 #wrapper {
     width: 305px;
-    height: 385px;
+    height: 500px;
     font-family: arial, sans-serif;
 }
+
 #container {
     font-size: 0;
     -webkit-text-size-adjust:none;
-    height: 710px;
     width: 270px;
     padding: 30px 0 0 25px;
 }
@@ -62,15 +67,18 @@ html, body {
     width: 64px;
     padding: 0 10px;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .app-icon {
     display: block;
     width: 64px;
     height: 64px;
-    background: url(../images/icons.png) no-repeat;
-    background-size: 536px 341px;
+}
+
+.app-icon img {
+    width: 64px;
+    height: 64px;
 }
 
 .app-text {
@@ -100,6 +108,7 @@ html, body {
 
 .even-more {
     padding-top: 30px;
+    padding-bottom: 20px;
     display: block;
     text-align: center;
     width: 270px;
