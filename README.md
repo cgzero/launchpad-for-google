@@ -1,6 +1,6 @@
 # Launchpad for Google
 
-适用于 Chrome 浏览器，快速登录 Google 应用的 Launchpad。[点此下载](https://chrome.google.com/webstore/detail/eilnaglmefieihnoliabhdbfldhimbog)
+适用于 Chrome 浏览器，快速登录 Google 应用的启动器。[点此下载](https://chrome.google.com/webstore/detail/eilnaglmefieihnoliabhdbfldhimbog)
 
 ![](https://raw.githubusercontent.com/cgzero/launchpad-for-google/master/tmp/screen-shot1.png)
 
