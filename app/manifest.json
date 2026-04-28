@@ -3,11 +3,11 @@
   "description": "Launchpad of your Google Apps",
   "version": "3.0.0",
   "action": {
-      "default_icon": "./src/img/icon.png",
+      "default_icon": "src/img/icon.png",
       "default_popup": "popup.html"
   },
   "icons": {
-    "128": "./src/img/icon.png"
+    "128": "src/img/icon.png"
   },
   "manifest_version": 3
 }
