@@ -9,5 +9,6 @@
   "icons": {
     "128": "src/img/icon.png"
   },
-  "manifest_version": 3
+  "manifest_version": 3,
+  "permissions": ["storage"]
 }
