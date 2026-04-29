@@ -106,18 +106,6 @@ body {
     user-select: none;
 }
 
-/* 拖拽占位符（原位置的空槽） */
-.app-item.sortable-ghost {
-    opacity: 0.2;
-}
-
-/* 跟随鼠标移动的拖拽元素（悬浮拽起效果） */
-.app-item.sortable-drag .app-btn {
-    background-color: var(--app-bg-hover);
-    box-shadow: var(--app-bg-active-shadow);
-    border-radius: 16px;
-}
-
 .app-btn {
     display: flex;
     flex-direction: column;
@@ -127,12 +115,16 @@ body {
     transition: transform .2s cubic-bezier(.333, 0, 0, 1);
 
     &:hover {
-        background-color: var(--app-bg-hover);
-
         .app-text {
             word-wrap: break-word;
             white-space: normal;
         }
+    }
+}
+
+.core-apps .app-btn {
+    &:hover {
+        background-color: var(--app-bg-hover);
     }
 
     &:active {
@@ -140,7 +132,6 @@ body {
         box-shadow: var(--app-bg-active-shadow);
     }
 }
-
 .extra-apps .app-btn {
     &:hover {
         background-color: var(--app-extra-bg-hover);
@@ -149,6 +140,10 @@ body {
     &:active {
         background-color: var(--app-extra-bg-active);
     }
+}
+
+.app-item.sortable-ghost .app-btn {
+    opacity: 0.2;
 }
 
 .app-icon {

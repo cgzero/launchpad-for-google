@@ -124,19 +124,21 @@ function initSortable(coreContainer, extraContainer) {
         animation: 150,
         onMove(evt) {
             if (evt.to === coreContainer) {
-                // 拖拽元素即将进入 core（尚未插入）
-                // evt.dragged.parentElement !== coreContainer 排除 core 内部移位的情况
-                if (evt.dragged.parentElement !== coreContainer && !displacedItem) {
-                    const items = coreContainer.querySelectorAll('.app-item');
-                    if (items.length >= CORE_MAX) {
-                        // core 已满：踢出末位 item 腾位，SortableJS 随后插入拖拽元素
-                        displacedItem = items[items.length - 1];
-                        extraContainer.insertBefore(displacedItem, extraContainer.firstChild);
-                    }
+                // 计数时排除 evt.dragged 本身（A 可能正在 core 内部移位）
+                const count = [...coreContainer.querySelectorAll('.app-item')]
+                    .filter(el => el !== evt.dragged).length;
+                if (count >= CORE_MAX && !displacedItem) {
+                    // core 已满：踢出末位 item 腾位，SortableJS 随后插入拖拽元素
+                    const items = [...coreContainer.querySelectorAll('.app-item')]
+                        .filter(el => el !== evt.dragged);
+                    displacedItem = items[items.length - 1];
+                    extraContainer.insertBefore(displacedItem, extraContainer.firstChild);
                 }
-            } else if (evt.to === extraContainer) {
-                // 拖拽元素正从 core 移回 extra（$.parentElement 仍为 core）
-                if (evt.dragged.parentElement === coreContainer && displacedItem) {
+            } else if (evt.to === extraContainer && displacedItem) {
+                // 仅当 A 已确认落在 extra（parentElement 已变更）时才恢复 displacedItem。
+                // 若在 A 还未离开 core 时就恢复，会导致 core 瞬间有 10 个元素，
+                // 用户反向拖拽时 A 可趁机进入已撑大的 core，造成超限。
+                if (evt.dragged.parentElement === extraContainer) {
                     coreContainer.appendChild(displacedItem);
                     displacedItem = null;
                 }
