@@ -1,5 +1,9 @@
 /**
  * @file App data definitions
+ *
+ * - en: https://support.google.com?hl=en
+ * - zh_CN: https://support.google.com?hl=zh-Hans
+ * - zh_TW: https://support.google.com?hl=zh-TW
  */
 
 export const CORE_APPS = [
@@ -293,6 +297,12 @@ export const EXTRA_APPS = [
         text: 'Sites',
         href: 'https://sites.google.com',
         position: '0px -2378px',
+    },
+    {
+        id: 'businessProfile',
+        text: 'Business Profile',
+        href: 'https://business.google.com',
+        position: '0px -2842px',
     },
     {
         id: 'vids',

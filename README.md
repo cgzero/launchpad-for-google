@@ -1,5 +1,15 @@
 # Launchpad for Google
 
-Access your Google apps with Launchpad for Google. [Download](https://chrome.google.com/webstore/detail/eilnaglmefieihnoliabhdbfldhimbog)
+A fast, clean launchpad for your Google apps
 
-![](tmp/screen-shot1.png)
+![Chrome Rating](https://img.shields.io/chrome-web-store/stars/eilnaglmefieihnoliabhdbfldhimbog)
+![Chrome User Count](https://img.shields.io/chrome-web-store/users/eilnaglmefieihnoliabhdbfldhimbog)
+
+## Install
+
+* [Chrome Web Store](https://chrome.google.com/webstore/detail/eilnaglmefieihnoliabhdbfldhimbog)
+
+## Screenshots
+
+![Screenshot1](tmp/screen-shot1.png)
+![Screenshot2](tmp/screen-shot2.png)

@@ -75,19 +75,23 @@ async function saveBothOrders(coreContainer, extraContainer) {
 /**
  * 将应用列表渲染为 HTML 并写入容器。
  * 每个 app 渲染为一个带 data-id 属性的 <li>，供 SortableJS 识别顺序。
+ * app 名称优先使用 chrome.i18n.getMessage(id)，未命中时回退到 apps.js 中的 text 字段。
  *
  * @param {Array} apps - 应用列表（含 id、href、text、position）
  * @param {HTMLElement} container - 目标容器元素
  */
 function renderApps(apps, container) {
-    container.innerHTML = apps.map(({ id, href, text, position }) => `
+    container.innerHTML = apps.map(({ id, href, text, position }) => {
+        const label = chrome.i18n.getMessage(id) || text;
+        return `
         <li class="app-item" data-id="${id}">
             <a target="_blank" href="${href}" class="app-btn">
                 <span class="app-icon" style="background-position: ${position};"></span>
-                <span class="app-text">${text}</span>
+                <span class="app-text">${label}</span>
             </a>
         </li>
-    `).join('');
+    `;
+    }).join('');
 }
 
 /**
