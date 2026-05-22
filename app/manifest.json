@@ -1,7 +1,7 @@
 {
   "name": "Launchpad for Google",
   "description": "A fast, clean launchpad for your Google apps",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "action": {
       "default_icon": "src/img/icon.png",
       "default_popup": "popup.html"

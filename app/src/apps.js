@@ -4,6 +4,12 @@
  * - en: https://support.google.com?hl=en
  * - zh_CN: https://support.google.com?hl=zh-Hans
  * - zh_TW: https://support.google.com?hl=zh-TW
+ * - ja: https://support.google.com?hl=ja
+ * - es: https://support.google.com?hl=es
+ * - pt_BR: https://support.google.com/?hl=pt-BR
+ * - ko: https://support.google.com/?hl=ko
+ * - de: https://support.google.com/?hl=de
+ * - fr: https://support.google.com/?hl=fr
  */
 
 export const CORE_APPS = [
