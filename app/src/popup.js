@@ -12,6 +12,9 @@ const STORAGE_KEYS = {
 /** core-apps 区域最多允许容纳的应用数量 */
 const CORE_MAX = 9;
 
+/** 雪碧图中相邻图标的垂直间距（缩放后，单位 px）；position 索引 × 该值即为 background-position 的 y 偏移 */
+const ICON_STEP = 58;
+
 /**
  * 从 chrome.storage.local 读取两个区域的排序，联合计算并返回最终的应用列表。
  *
@@ -76,6 +79,7 @@ async function saveBothOrders(coreContainer, extraContainer) {
  * 将应用列表渲染为 HTML 并写入容器。
  * 每个 app 渲染为一个带 data-id 属性的 <li>，供 SortableJS 识别顺序。
  * app 名称优先使用 chrome.i18n.getMessage(id)，未命中时回退到 apps.js 中的 text 字段。
+ * app.position 为雪碧图中的图标索引，乘以 ICON_STEP 得到 background-position 的 y 偏移。
  *
  * @param {Array} apps - 应用列表（含 id、href、text、position）
  * @param {HTMLElement} container - 目标容器元素
@@ -86,7 +90,7 @@ function renderApps(apps, container) {
         return `
         <li class="app-item" data-id="${id}">
             <a target="_blank" href="${href}" class="app-btn">
-                <span class="app-icon" style="background-position: ${position};"></span>
+                <span class="app-icon" style="background-position: 0px -${position * ICON_STEP}px;"></span>
                 <span class="app-text">${label}</span>
             </a>
         </li>
